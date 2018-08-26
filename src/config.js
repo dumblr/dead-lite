@@ -1,0 +1,2 @@
+export const DAT_URL =
+  'aeac0a57a7f65ea03693909d817e93d8340c243137ed483076d7b68b18d09c61';

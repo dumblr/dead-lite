@@ -1,0 +1,10 @@
+{
+  "postId": "1d2abc01-2ae9-4954-8ade-cc9425477889",
+  "titleContent": "Introducing Dead",
+  "textContent":
+    "## What is _dead_?\n\nDead is a blogging/tumblog/content manufacturing device built using [dat](https://datproject.org/) and running on [beaker browser](https://beakerbrowser.com/). Have you heard of tumblr before? Then you get it.\n\nThe key difference, though, is that by running on the dat protocol, dead enables each individual to create their own instance of dead and to publish their own content on their own computer and share to other people who have their own dead instances. This means the data lives on your computer and doesn't require any server space.\n\n## I want to use _dead_\n\nCool. You should. To create your own _dead_ instance you can either [follow the instructions here](https://github.com/dumblr/xXx___dead___xXx) or [fork this site](https://beakerbrowser.com/2017/06/14/forking-websites-on-the-p2p-web.html) and update your info in the settings section.",
+  "imageContent": "",
+  "createdAt": 1532999738992,
+  "postType": "text",
+  "postAuthor": "dead dead"
+}

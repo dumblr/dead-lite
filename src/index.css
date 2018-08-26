@@ -1,0 +1,460 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.ContentView {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 100px 20px 60px 20px;
+}
+.Post {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding-top: 100px;
+}
+.Post__Title {
+  padding-bottom: 30px;
+}
+.Header {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 18px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.Header__Nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  z-index: 4;
+}
+.HomeArrow {
+  transform: translateX(0px);
+  transition: transform 200ms ease;
+}
+.HomeArrow img {
+  cursor: pointer;
+  height: auto;
+  transform: rotate(-90deg);
+  width: 40px;
+}
+.HomeArrow:hover {
+  transform: translateX(-6px);
+}
+.HomeArrow--Hide {
+  display: none;
+}
+.ContentToggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  tranform: rotate(0deg);
+  transition: transform 200ms ease;
+}
+.ContentToggle img {
+  height: auto;
+  width: 30px;
+}
+.ContentToggle_Open {
+  transform: rotate(45deg);
+}
+.ContentDisplayToggle img {
+  height: auto;
+  width: 30px;
+}
+.ContentDisplayToggle--Hide {
+  display: none;
+}
+.ContentDisplayToggle__Item {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 15px;
+  opacity: 0.4;
+  transition: opacity 200ms ease;
+}
+.ContentDisplayToggle__Item:hover {
+  opacity: 0.7;
+}
+.ContentDisplayToggle__Item_Selected {
+  opacity: 1;
+}
+.ContentItem {
+  display: grid;
+  grid-auto-rows: minmax(0px, auto);
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  grid-template-columns: 45px auto;
+  padding-bottom: 60px;
+}
+.ContentItem__Title {
+  margin-bottom: 30px;
+  font-weight: bolder;
+}
+.ContentItem p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 20px;
+  max-width: 560px;
+  padding: 0;
+}
+.ContentItem__Date p {
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: right;
+}
+.ContentItem__View {
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+.ContentItem__View h2 {
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.ContentItem__View h3 a {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+.ContentItem__Delete {
+  padding: 10px 0;
+}
+.ContentItem__Delete a {
+  cursor: pointer;
+  padding: 5px;
+}
+.ContentItem__Delete a svg {
+  fill: #a9a9a9;
+  height: 24px;
+  transition: fill 200ms ease;
+  width: 24px;
+}
+.ContentItem__Delete a:hover svg {
+  fill: red;
+}
+.Button {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 6px 20px;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.Button--White {
+  background-color: #fff;
+  color: #000;
+}
+.Button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.Button--White:hover {
+  background-color: #ccc;
+}
+.ImagePost img {
+  max-width: 100%;
+}
+.ContentSelection {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: auto;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: max-height 300ms ease, opacity 300ms ease;
+  width: 100%;
+}
+.ContentSelection__Display {
+  max-width: 650px;
+  opacity: 1;
+  padding-left: 60px;
+  transition: max-width 200ms ease, opacity 200ms ease;
+  width: 100%;
+}
+.ContentSelection__Display_Hide {
+  max-width: 0;
+  opacity: 0;
+}
+.ContentSelection__Item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.ContentSelection__Item p {
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.ContentSelection__Item_Hide {
+  opacity: 0.3;
+  transition: opacity 200ms ease;
+}
+.ContentSelection__Item_Hide:hover {
+  opacity: 0.8;
+}
+.ContentSelection__Items {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-column-gap: 60px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, 125px);
+}
+.ContentSelection__Items_Slim {
+  grid-template-columns: repeat(1, 50px);
+}
+.ContentSelection__ShowForm {
+  flex-wrap: nowrap;
+}
+.ContentSelection__Open {
+  max-height: 800px;
+  opacity: 1;
+  z-index: 3;
+}
+.ContentSelection__Wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 60px;
+  padding-top: 90px;
+}
+.ContentSelection__Item img {
+  width: 100%;
+  height: auto;
+}
+.TextPost form {
+  max-width: 400px;
+  width: 100%;
+}
+.Box {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  margin: 30px 0 22px 0;
+  padding: 30px 15px;
+  width: 100%;
+}
+.Box input {
+  width: 100%;
+}
+.Box label {
+  color: #ccc;
+  margin-top: 15px;
+}
+.BrowserDetection {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 150px 20px;
+}
+.BrowserDetection a {
+  color: red;
+}
+.FormElement {
+  margin-bottom: 24px;
+  position: relative;
+  width: 100%;
+}
+.FormElement input[type='text'],
+.FormElement textarea {
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  outline: none;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+.FormElement input[type='text'] {
+  font-size: 16px;
+}
+.FormElement textarea {
+  font-size: 12px;
+}
+.FormElement label {
+  font-weight: bold;
+  left: 13px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 13px;
+  transition: transform 200ms ease;
+  user-select: none;
+}
+.FormElement input[type='text']:focus,
+.FormElement textarea:focus {
+  outline: none;
+}
+.FormElement input[type='text']:focus ~ label,
+.FormElement textarea:focus ~ label,
+.FormElementActive input[type='text'] ~ label,
+.FormElementActive textarea ~ label {
+  font-size: 12px;
+  transform: translate(0px, -31px);
+  z-index: 4;
+}
+.FormElementCheckbox {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.FormElementCheckbox input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  backface-visibility: hidden;
+  background: #fff;
+  margin-bottom: 20px;
+  outline: none;
+  position: relative;
+  transition: background 200ms ease;
+  z-index: 2;
+}
+.FormElementCheckbox label {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  left: 8px;
+  opacity: 0.4;
+  position: relative;
+  top: -8px;
+  text-transform: uppercase;
+  transition: opacity 200ms ease;
+}
+.FormElementCheckbox input[type='checkbox']:checked {
+  background: #000;
+}
+.FormElementCheckbox input[type='checkbox']:checked ~ label {
+  opacity: 1;
+}
+
+.ImagePost form {
+  max-width: 400px;
+  width: 100%;
+}
+.TextPost h1 {
+  font-size: 30px;
+  font-weight: normal;
+}
+.TextPost h2 {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: none;
+}
+.TextPost h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.TextPost h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.TextPost h5 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.TextPost p {
+  font-size: 14px;
+  line-height: 21px;
+}
+.TextPost a {
+  color: black;
+  font-weight: 900;
+}
+.EditMenu {
+  display: inline;
+  position: absolute;
+  right: 0;
+}
+.EditMenu__Drawer__Item {
+  cursor: pointer;
+  padding: 10px 4px;
+}
+.EditMenu__Drawer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: max-height 200ms ease, opacity 200ms ease;
+}
+.EditMenu__Drawer--Open {
+  max-height: 200px;
+  opacity: 1;
+}
+.EditMenu__Toggle svg {
+  cursor: pointer;
+  height: auto;
+  width: 30px;
+}
+.DeleteModal {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 100vh;
+  left: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: opacity 400ms ease, max-height 400ms ease;
+  width: 100vw;
+  z-index: 5;
+}
+.DeleteModal__Container {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 0;
+  margin: 5% auto;
+  padding: 5px 30px;
+  position: absolute;
+  right: 0;
+  top: 200px;
+  width: 400px;
+  z-index: 6;
+}
+.DeleteModal__Show {
+  max-height: 100%;
+  opacity: 1;
+}
+.DeleteModal__Show .DeleteModal__Container {
+  display: flex;
+}
+.ImagePreview {
+  position: relative;
+  width: 120px;
+}
+
+.ImagePreview img {
+  height: auto;
+  width: 100%;
+}
+
+.ImagePreview__Delete svg {
+  cursor: pointer;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  transform: rotate(45deg);
+  width: 25px;
+}

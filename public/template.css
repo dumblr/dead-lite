@@ -1,0 +1,34 @@
+body {
+  /*--- Change Font Here: --- */
+  /* font-family: sans-serif; */
+}
+.Header {
+  /*--- Change Header Background Color Here: --- */
+  /* background-color: rgba(255, 255, 255, 0.8); */
+}
+
+.ContentItem__Date p {
+  /*--- Change Date Color: --- */
+  /* color: black; */
+}
+.ContentItem__View h2 {
+  /*--- Change Time Stamp Color: --- */
+  /* color: black; */
+}
+.ContentItem__View h3 a {
+  /*--- Change Post Title Color: --- */
+  /* color: black; */
+}
+.Button {
+  /*--- Change Button Colors, etc.: --- */
+  /* background-color: #000;
+  border: 1px solid #000;
+  border-radius: 2px; */
+}
+.Button:hover {
+  /*--- Change Button Hover Effect Colors, etc.: --- */
+  /* background-color: #fff;
+  color: #000; */
+}
+
+/*--- Or add any other CSS you want here: --- */
