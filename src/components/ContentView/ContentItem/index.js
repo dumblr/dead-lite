@@ -70,7 +70,7 @@ const ContentItem = ({ vals, deletePost, toggleDelete, isOwner }) => {
           />
         )}
         <h2>
-          {vals.author_avatar} {vals.postAuthor} @ {Time}
+          {vals.postAvatar} {vals.postAuthor} @ {Time}
         </h2>
         <h3 className="ContentItem__Title">
           <a href={'/post/' + vals.postId}>{vals.titleContent}</a>

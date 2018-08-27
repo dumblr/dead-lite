@@ -37,7 +37,8 @@ class TextPost extends React.Component {
         '',
         newPostId,
         'text',
-        this.props.userData.name
+        this.props.userData.name,
+        this.props.userData.avatar
       )
     );
     //--- TODO Add Post Author above here...

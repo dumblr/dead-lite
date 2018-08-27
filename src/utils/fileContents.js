@@ -4,7 +4,8 @@ const fileContents = (
   postImage,
   postIdStr,
   postType,
-  postAuthor
+  postAuthor,
+  postAvatar
 ) =>
   JSON.stringify({
     postId: postIdStr,
@@ -13,7 +14,8 @@ const fileContents = (
     imageSource: postImage,
     createdAt: Date.now(),
     postType: postType,
-    postAuthor: postAuthor
+    postAuthor: postAuthor,
+    postAvatar: postAvatar
   });
 
 export default fileContents;

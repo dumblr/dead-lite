@@ -440,6 +440,7 @@ h5 {
   display: flex;
 }
 .ImagePreview {
+  margin-bottom: 30px;
   position: relative;
   width: 120px;
 }

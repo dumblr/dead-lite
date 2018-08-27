@@ -57,11 +57,12 @@ class ImagePost extends React.Component {
       `/posts/${newPostId}.json`,
       fileContents(
         titleContent,
-        JSON.stringify(textContent),
+        textContent,
         imageFile,
         newPostId,
         'image',
-        this.props.userData.name
+        this.props.userData.name,
+        this.props.userData.avatar
       )
     );
 
