@@ -404,7 +404,7 @@ h5 {
   width: 30px;
 }
 .DeleteModal {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.7);
   height: 100vh;
   left: 0;
   max-height: 0;
@@ -428,7 +428,7 @@ h5 {
   padding: 5px 30px;
   position: absolute;
   right: 0;
-  top: 200px;
+  top: 30px;
   width: 400px;
   z-index: 6;
 }
