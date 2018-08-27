@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import sortBy from 'lodash.sortby';
+import urlEnv from '../../utils/urlEnv';
+import profileContents from '../../utils/profileContents';
 
 import ContentViewContainer from '../ContentViewContainer';
-import urlEnv from '../../utils/urlEnv';
 import PostContainer from '../PostContainer/index';
+import Settings from '../Settings';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +17,7 @@ class App extends Component {
       correctBrowser: true,
       isOwner: false,
       posts: [],
-      postDisplay: 'mine'
+      userData: []
     };
   }
 
@@ -109,15 +111,6 @@ class App extends Component {
     });
   };
 
-  togglePostDisplay = val => {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        postDisplay: val
-      };
-    });
-  };
-
   deletePost = async postId => {
     const archive = await new global.DatArchive(urlEnv());
     await archive.unlink(`/posts/${postId}.json`);
@@ -130,8 +123,35 @@ class App extends Component {
     window.location.href = '/';
   };
 
+  //--- Settings Functions
+  updateUserData = e => {
+    e.preventDefault();
+    this.changeUserData(this.state.userData);
+  };
+
+  userDataChange = (e, str) => {
+    this.setState({
+      userData: {
+        ...this.state.userData,
+        [str]: e.target.value
+      }
+    });
+  };
+
+  changeUserData = async userData => {
+    const archive = await new global.DatArchive(urlEnv());
+    await archive.writeFile(`profile.json`, profileContents(userData));
+    this.state.editProfile === true && this.toggleEdit();
+  };
+
+  toggleEdit = () =>
+    this.setState({
+      editProfile: !this.state.editProfile
+    });
+
+  sortedPosts = posts => sortBy(posts, ['createdAt']).reverse();
+
   render() {
-    const sortedPosts = sortBy(this.state.posts, ['createdAt']).reverse();
     return (
       <Router>
         <div>
@@ -143,11 +163,9 @@ class App extends Component {
                 loading={this.state.loading}
                 contentSelectionOpen={this.state.contentSelectionOpen}
                 toggleContentSelection={this.toggleContentSelection}
-                postDisplay={this.state.postDisplay}
-                posts={sortedPosts}
+                posts={this.sortedPosts(this.state.posts)}
                 isOwner={this.state.isOwner}
                 getPosts={this.getAllPostsSaved}
-                togglePostDisplayFn={this.togglePostDisplay}
                 correctBrowser={this.state.correctBrowser}
                 deletePost={this.deletePost}
                 deadTitle={this.state.deadTitle}
@@ -163,13 +181,32 @@ class App extends Component {
                 loading={this.state.loading}
                 contentSelectionOpen={this.state.contentSelectionOpen}
                 toggleContentSelection={this.toggleContentSelection}
-                togglePostDisplayFn={this.togglePostDisplay}
                 getPosts={this.getAllPostsSaved}
                 isOwner={this.state.isOwner}
                 correctBrowser={this.state.correctBrowser}
                 deletePost={this.deletePostSingle}
                 deadTitle={this.state.deadTitle}
                 deadDescription={this.state.deadDescription}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path="/settings"
+            render={props => (
+              <Settings
+                contentSelectionOpen={this.state.contentSelectionOpen}
+                toggleContentSelection={this.toggleContentSelection}
+                getPosts={this.refreshPosts}
+                isOwner={this.state.isOwner}
+                correctBrowser={this.state.correctBrowser}
+                deadTitle={this.state.deadTitle}
+                deadDescription={this.state.deadDescription}
+                userData={this.state.userData}
+                updateUserData={this.updateUserData}
+                userDataChange={this.userDataChange}
+                toggleEdit={this.toggleEdit}
+                editProfile={this.state.editProfile}
                 {...props}
               />
             )}

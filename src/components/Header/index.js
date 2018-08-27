@@ -4,8 +4,6 @@ import ContentSelection from '../ContentSelection';
 const Header = ({
   getPosts,
   contentSelectionOpen,
-  postDisplay,
-  togglePostDisplay,
   toggleContentSelection,
   hideMineToggle,
   userData
@@ -25,27 +23,11 @@ const Header = ({
           hideMineToggle ? 'ContentDisplayToggle--Hide' : ''
         }`}
       >
-        <a
-          className={`
-          ${'ContentDisplayToggle__Item'} 
-          ${postDisplay === 'mine' ? 'ContentDisplayToggle__Item_Selected' : ''}
-        `}
-          onClick={() => togglePostDisplay('mine')}
-        >
+        <a className={`${'ContentDisplayToggle__Item'} `} href="/">
           <img src="/icons/icon-smile.svg" alt="show my posts" />
         </a>
-        <a
-          className={`
-          ${'ContentDisplayToggle__Item'} 
-          ${
-            postDisplay === 'settings'
-              ? 'ContentDisplayToggle__Item_Selected'
-              : ''
-          }
-        `}
-          onClick={() => togglePostDisplay('settings')}
-        >
-          <img src="/icons/icon-settings.svg" alt="" />
+        <a className={`${'ContentDisplayToggle__Item'}`} href="/settings">
+          <img src="/icons/icon-settings.svg" alt="settings" />
         </a>
       </div>
       <a

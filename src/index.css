@@ -78,14 +78,11 @@ body {
   cursor: pointer;
   display: inline-block;
   margin-left: 15px;
-  opacity: 0.4;
+  opacity: 1;
   transition: opacity 200ms ease;
 }
 .ContentDisplayToggle__Item:hover {
   opacity: 0.7;
-}
-.ContentDisplayToggle__Item_Selected {
-  opacity: 1;
 }
 .ContentItem {
   display: grid;
@@ -462,4 +459,46 @@ h5 {
   margin: 0 auto;
   max-width: 1040px;
   padding: 20px;
+}
+.Settings {
+  padding-bottom: 100px;
+}
+.Settings__Container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 900px;
+  padding-top: 100px;
+}
+.Settings__Item {
+  flex-basis: 50%;
+  padding-right: 40px;
+}
+.Profile .label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.Settings__Title {
+  max-width: 250px;
+  position: relative;
+}
+.Settings .Edit__Toggle {
+  cursor: pointer;
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  top: -3px;
+  transform: rotate(0deg);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.Settings .Edit__Toggle:hover {
+  opacity: 1;
+  transform: rotate(10deg);
+}
+.Settings .Edit__Toggle img {
+  height: auto;
+  width: 40px;
 }

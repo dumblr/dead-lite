@@ -7,8 +7,6 @@ import UserInfo from '../../components/SharedComponents/UserInfo';
 const ContentViewContainer = ({
   loading,
   getPosts,
-  postDisplay,
-  togglePostDisplayFn,
   toggleContentSelection,
   posts,
   contentSelectionOpen,
@@ -23,8 +21,6 @@ const ContentViewContainer = ({
     {isOwner && (
       <Header
         contentSelectionOpen={contentSelectionOpen}
-        postDisplay={postDisplay}
-        togglePostDisplay={togglePostDisplayFn}
         getPosts={getPosts}
         toggleContentSelection={toggleContentSelection}
         userData={userData}
@@ -33,13 +29,13 @@ const ContentViewContainer = ({
     {!isOwner && (
       <UserInfo deadTitle={deadTitle} deadDescription={deadDescription} />
     )}
+    {console.log(posts)}
     {!correctBrowser && <BrowserDetection />}
     {loading ? (
       <div />
     ) : (
       <ContentView
         deletePost={deletePost}
-        postDisplay={postDisplay}
         posts={posts}
         correctBrowser={correctBrowser}
         isOwner={isOwner}

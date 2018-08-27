@@ -8,7 +8,6 @@ class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postDisplay: 'mine',
       postData: {}
     };
   }
@@ -17,12 +16,6 @@ class PostContainer extends React.Component {
     const archive = await new global.DatArchive(urlEnv());
     this.getPost(this.props.match.params.postId, archive);
   }
-
-  togglePostDisplay = val => {
-    this.setState({
-      postDisplay: val
-    });
-  };
 
   getPost = async (postId, archive) => {
     const myPost = await archive.readFile('/posts/' + postId + '.json');
@@ -39,9 +32,7 @@ class PostContainer extends React.Component {
           <Header
             contentSelectionOpen={this.props.contentSelectionOpen}
             toggleContentSelection={this.props.toggleContentSelection}
-            togglePostDisplay={this.props.togglePostDisplayFn}
             getPosts={this.props.getPosts}
-            postDisplay={this.state.postDisplay}
             hideMineToggle={true}
           />
         )}
