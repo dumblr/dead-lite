@@ -33,7 +33,7 @@ class TextPost extends React.Component {
       `/posts/${newPostId}.json`,
       fileContents(
         titleContent,
-        JSON.stringify(textContent),
+        textContent,
         '',
         newPostId,
         'text',

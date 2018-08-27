@@ -15,7 +15,7 @@ class App extends Component {
       correctBrowser: true,
       isOwner: false,
       posts: [],
-      postDisplay: 'theirs'
+      postDisplay: 'mine'
     };
   }
 
@@ -132,7 +132,6 @@ class App extends Component {
 
   render() {
     const sortedPosts = sortBy(this.state.posts, ['createdAt']).reverse();
-    console.log('state', this.state);
     return (
       <Router>
         <div>

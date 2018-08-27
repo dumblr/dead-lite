@@ -1,18 +1,19 @@
-# xXx\_\_\_dead\_\_\_xXx
+# _dead-lite_
 
-![wot](./yea.jpg)
+## What is _dead-lite_?
 
-## What is _dead_?
+_Dead_ is a blogging/tumblog/content manufacturing device built using [dat](https://datproject.org/) and running on [beaker browser](https://beakerbrowser.com/). Have you heard of a blog before? Then you get it.
 
-_Dead_ is a blogging/tumblog/content manufacturing device built using [dat](https://datproject.org/) and running on [beaker browser](https://beakerbrowser.com/). Have you heard of tumblr before? Then you get it.
+The key difference, though, is that by running on the dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share to other people. This means the data lives on your computer and doesn't _require_ any server space.
 
-The key difference, though, is that by running on the dat protocol, _dead_ enables each individual to create their own instance of _dead_ and to publish their own content on their own computer and share to other people who have their own _dead_ instances. This means the data lives on your computer and doesn't _require_ any server space.
+## Use _dead-lite_
 
-We will have more info as the project progresses about features and hot tips on how to make _dead_ more personalized.
+1. Go to [dead-lite.hashbase.io] (https://dead-lite.hashbase.io) in beaker browser
+2. Click on the `...` menu and select "make an editable copy"
+3. 
+4. Change your theme using the template.css file in the root of the repository. Add anything you want in there to change the site.
 
-## Development
-
-_dead_ is still heavily in development, but we encourage people to jump on and give it a try. Feeling really ambitious? Jump in the code base and give us a good ole' PR. _dead_ will never make any of us a dime so, like, the free labor probably won't be that exploited.
+## Development Setup
 
 1.  Clone the repo.
 2.  Install dependencies

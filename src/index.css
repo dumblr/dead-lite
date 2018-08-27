@@ -21,10 +21,12 @@ body {
 }
 .Header {
   background-color: rgba(255, 255, 255, 0.8);
+  left: 0;
   margin: 0 auto;
   max-width: 1440px;
   padding: 18px 20px;
   position: fixed;
+  right: 0;
   width: 100%;
   z-index: 3;
 }
@@ -444,12 +446,10 @@ h5 {
   position: relative;
   width: 120px;
 }
-
 .ImagePreview img {
   height: auto;
   width: 100%;
 }
-
 .ImagePreview__Delete svg {
   cursor: pointer;
   position: absolute;
@@ -457,4 +457,9 @@ h5 {
   top: -15px;
   transform: rotate(45deg);
   width: 25px;
+}
+.UserInfo {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 20px;
 }

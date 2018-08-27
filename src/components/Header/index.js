@@ -28,19 +28,6 @@ const Header = ({
         <a
           className={`
           ${'ContentDisplayToggle__Item'} 
-          ${
-            postDisplay === 'theirs'
-              ? 'ContentDisplayToggle__Item_Selected'
-              : ''
-          }
-        `}
-          onClick={() => togglePostDisplay('theirs')}
-        >
-          <img src="/icons/icon-group.svg" alt="show their posts" />
-        </a>
-        <a
-          className={`
-          ${'ContentDisplayToggle__Item'} 
           ${postDisplay === 'mine' ? 'ContentDisplayToggle__Item_Selected' : ''}
         `}
           onClick={() => togglePostDisplay('mine')}
