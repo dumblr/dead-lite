@@ -8,7 +8,7 @@ The key difference, though, is that by running on the dat protocol, _dead-lite_ 
 
 ## Use _dead-lite_
 
-1. Go to [dead-lite.hashbase.io] (https://dead-lite.hashbase.io) in beaker browser
+1. Go to [dead-lite.hashbase.io](dat://dead-lite.hashbase.io) in beaker browser
 2. Click on the `...` menu and select "make an editable copy"
 3. 
 4. Change your theme using the template.css file in the root of the repository. Add anything you want in there to change the site.
