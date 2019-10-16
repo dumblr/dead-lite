@@ -2,9 +2,9 @@
 
 ## What is _dead-lite_?
 
-_Dead_ is a blogging/tumblog/content manufacturing device built using [dat](https://datproject.org/) and running on the [Beaker browser](https://beakerbrowser.com/). Have you heard of a blog before? Then you get it.
+_Dead_ is a blogging/tumblog/content manufacturing device built using [Dat](https://datproject.org/) and running on the [Beaker browser](https://beakerbrowser.com/). Have you heard of a blog before? Then you get it.
 
-The key difference, though, is that by running on the dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share with other people. This means the data lives on your computer and doesn't _require_ any server space.
+The key difference, though, is that by running on the Dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share with other people. This means the data lives on your computer and doesn't require any server space.
 
 ## Use _dead-lite_
 
