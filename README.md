@@ -4,12 +4,12 @@
 
 _Dead_ is a blogging/tumblog/content manufacturing device built using [dat](https://datproject.org/) and running on [beaker browser](https://beakerbrowser.com/). Have you heard of a blog before? Then you get it.
 
-The key difference, though, is that by running on the dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share to other people. This means the data lives on your computer and doesn't _require_ any server space.
+The key difference, though, is that by running on the dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share with other people. This means the data lives on your computer and doesn't _require_ any server space.
 
 ## Use _dead-lite_
 
-1. Go to [dat://dead-lite.hashbase.io](dat://dead-lite.hashbase.io) in beaker browser
-2. Click on the `...` menu and select "make an editable copy"
+1. Load _dead-lite_  via `dat://dead-lite.hashbase.io` in [beaker browser](https://beakerbrowser.com/).
+2. Click on the `...` menu and select __Make an editable copy__.
 3. Fill in the page title, etc. and then open up your dat URL to get going.
 4. Change your theme using the template.css file in the root of the repository. Add anything you want in there to change the site.
 
