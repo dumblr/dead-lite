@@ -14,7 +14,7 @@ The key difference, though, is that by running on the Dat protocol, _dead-lite_ 
 4. Open a new browser tab and enter `beaker://library/` in the address bar.
 5. Select your renamed copy of _dead-lite_ from your library.
 6. Click your DAT URL to launch the tool.
-7. Select `...` next to the original post to delete it. The __+__ icon lets you add an image and/or text. The gear (Settings) icon lets you create an avatar, username, and bio.
+7. Select `...` next to the default blog post to delete it. The __+__ icon lets you add an image and/or text. The __gear__ (Settings) icon lets you create an avatar, username, and bio.
 
 You can change your blog's theme using the `template.css` file in the repository's root. 
 
