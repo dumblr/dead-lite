@@ -2,16 +2,21 @@
 
 ## What is _dead-lite_?
 
-_Dead_ is a blogging/tumblog/content manufacturing device built using [dat](https://datproject.org/) and running on [beaker browser](https://beakerbrowser.com/). Have you heard of a blog before? Then you get it.
+_Dead_ is a blogging/tumblog/content manufacturing device built using [Dat](https://datproject.org/) and running on the [Beaker browser](https://beakerbrowser.com/). Have you heard of a blog before? Then you get it.
 
-The key difference, though, is that by running on the dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share to other people. This means the data lives on your computer and doesn't _require_ any server space.
+The key difference, though, is that by running on the Dat protocol, _dead-lite_ enables each individual to create their own instance of _dead-lite_ and to publish their own content on their own computer and share with other people. This means the data lives on your computer and doesn't require any server space.
 
-## Use _dead-lite_
+## How to use _dead-lite_
 
-1. Go to [dat://dead-lite.hashbase.io](dat://dead-lite.hashbase.io) in beaker browser
-2. Click on the `...` menu and select "make an editable copy"
-3. Fill in the page title, etc. and then open up your dat URL to get going.
-4. Change your theme using the template.css file in the root of the repository. Add anything you want in there to change the site.
+1. Load _dead-lite_  via `dat://dead-lite.hashbase.io` in the [Beaker browser](https://beakerbrowser.com/).
+2. Click on the `...` menu and select __Make editable copy__.
+3. Fill in the Title and Description and then select __Create copy__.
+4. Open a new browser tab and enter `beaker://library/` in the address bar.
+5. Select your renamed copy of _dead-lite_ from your library.
+6. Click your DAT URL to launch the tool.
+7. Select `...` next to the default blog post to delete it. The __+__ icon lets you add an image and/or text. The __gear__ (Settings) icon lets you create an avatar, username, and bio.
+
+You can change your blog's theme using the `template.css` file in the repository's root. 
 
 ## Development Setup
 
